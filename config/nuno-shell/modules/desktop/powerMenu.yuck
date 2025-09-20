@@ -1,0 +1,53 @@
+(defwindow powerMenu
+    :monitor 0
+    :class "powerMenu"
+    :namespace "nuno-shell"
+    :geometry (geometry
+        :x "0px"
+        :y "-1px"
+        :width "120px"
+        :height "5px"
+        :anchor "center bottom"
+    )
+    (eventbox
+    :onhover "${EWW_CMD} update show_powerMenu=true"
+    :onhoverlost "${EWW_CMD} update show_powerMenu=false"
+        (revealer
+            :transition "slideup"
+            :reveal show_powerMenu
+            :duration "200ms"
+            (powerMenuRevealer)
+        )
+    )
+)
+
+(defvar show_powerMenu false)
+
+(defwidget powerMenuWidget []
+    (box
+        :orientation "h"
+        :class "powerMenu-panel"
+        :space-evenly false
+        (button
+            :class "powerMenuShutdown"
+            :onclick "systemctl shutdown"
+            "󰐥"
+        )
+        (button
+            :class "powerMenuButton"
+            :onclick "systemctl reboot"
+            ""
+        )
+        (button
+            :class "powerMenuButton"
+            :onclick "modules/rightSide/scripts/rightSideButtons.sh --lock"
+            ""
+        )
+    )
+)
+(defwidget powerMenuRevealer []
+    (box
+        :orientation "h"
+        (powerMenuWidget)
+    )
+)
