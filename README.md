@@ -3,7 +3,7 @@ my personal Hyprland dotfiles
 
 !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
 
-Uses hyprshot, hyprland, JetBrains Nerdfont Mono, and EWW.
+Uses hyprshot, hyprland, hyprlock, JetBrains Nerdfont Mono, and EWW.
 
 obs: EWW searches for "wallpaper.png" on (eww config)/assets/wallpaper.png
 
