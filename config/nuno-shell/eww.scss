@@ -74,7 +74,7 @@ $grey: #949494;
     padding: 10px 50px 10px 50px;
 }
 
-.bluetooth-on {
+.bluetooth-on, .networkToggle-on {
     color: $foreground-dark;
     background-color: $foreground;
     border-radius: 4px;
@@ -83,13 +83,17 @@ $grey: #949494;
     padding: 10px 50px 10px 50px;
 }
 
-.bluetooth-off {
+.bluetooth-off, .networkToggle-off {
     color: $foreground;
     background-color: $background-button;
     border-radius: 4px;
     font-size: 16px;
     margin: 5px 5px 5px 5px;
     padding: 10px 50px 10px 50px;
+}
+
+.networkToggle-off, .networkToggle-on {
+    padding: 5px 10px 5px 5px;
 }
 
 .rightSide {
