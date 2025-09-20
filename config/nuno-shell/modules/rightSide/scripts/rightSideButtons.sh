@@ -6,9 +6,6 @@ if [[ "$1" == "--dolphin" ]]; then
 elif [[ "$1" == "--lock" ]]; then
 	hyprlock &
 
-elif [[ "$1" == "--appLauncher" ]]; then
-	vicinae &
-
 elif [[ "$1" == "--hyprshot" ]]; then
 	hyprshot -m region &
 
