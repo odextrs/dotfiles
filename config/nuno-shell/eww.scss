@@ -35,7 +35,8 @@ $grey: #949494;
     border-radius: 3px;
 }
 
-.mediaControlsButton, .mediaControlsResume{
+.mediaControlsButton,
+.mediaControlsResume {
     color: $foreground;
     background-color: transparent;
     border-radius: 4px;
@@ -44,7 +45,7 @@ $grey: #949494;
     font-size: 20px;
 }
 
-.mediaControlsResume{
+.mediaControlsResume {
     color: $foreground-dark;
     background-color: $foreground;
     font-size: 16px;
@@ -74,7 +75,8 @@ $grey: #949494;
     padding: 10px 50px 10px 50px;
 }
 
-.bluetooth-on, .networkToggle-on {
+.bluetooth-on,
+.networkToggle-on {
     color: $foreground-dark;
     background-color: $foreground;
     border-radius: 4px;
@@ -83,7 +85,8 @@ $grey: #949494;
     padding: 10px 50px 10px 50px;
 }
 
-.bluetooth-off, .networkToggle-off {
+.bluetooth-off,
+.networkToggle-off {
     color: $foreground;
     background-color: $background-button;
     border-radius: 4px;
@@ -92,7 +95,8 @@ $grey: #949494;
     padding: 10px 50px 10px 50px;
 }
 
-.networkToggle-off, .networkToggle-on {
+.networkToggle-off,
+.networkToggle-on {
     padding: 5px 10px 5px 5px;
 }
 
@@ -128,5 +132,11 @@ menuitem:hover {
     font-size: 50px;
     font-family: "Koulen";
     color: $grey;
-    padding: 30px 30px 30px 30px
+    padding: 30px 30px 30px 30px;
+}
+
+.wallpaperWidget {
+    background-image: url("assets/wallpaper.png");
+    background-size: cover;
+    background-position: center;
 }
