@@ -1,5 +1,6 @@
 # dotfiles
 my personal Hyprland dotfiles
+
 !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz.)
 
 Install hyprshot, hyprpaper, hyprland, and EWW from your distribution package repository.
