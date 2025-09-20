@@ -36,7 +36,9 @@ $grey: #949494;
 }
 
 .mediaControlsButton,
-.mediaControlsResume {
+.mediaControlsResume,
+.powerMenuButton,
+.powerMenuShutdown {
     color: $foreground;
     background-color: transparent;
     border-radius: 4px;
@@ -49,6 +51,11 @@ $grey: #949494;
     color: $foreground-dark;
     background-color: $foreground;
     font-size: 16px;
+}
+
+.powerMenuShutdown {
+    color: $foreground-dark;
+    background-color: $foreground;
 }
 
 .mediaCover {
