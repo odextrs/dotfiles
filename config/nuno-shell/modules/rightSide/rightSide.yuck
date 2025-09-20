@@ -26,6 +26,7 @@
 (defpoll cover_art_path :interval "1s" "modules/rightSide/scripts/mediaCover.sh")
 (defpoll bluetooth_status :interval "0.1s" "modules/rightSide/scripts/bluetoothctl.sh status")
 (defpoll network_status :interval "0.1s" "modules/rightSide/scripts/network.sh status")
+(deflisten current_volume "modules/rightSide/scripts/volume.sh --get")
 
 (defwidget rightSideWidget []
     (box
@@ -60,12 +61,11 @@
                 )
             )
         )
-        (box
+        (box ;; yes this box is necessary, else it just breaks
             :class "rightSideButton-misc"
             :orientation "h"
             :space-evenly false
-            (box
-                :class "rightSideButton-panel"
+            (box ;; left side
                 :orientation "h"
                 :space-evenly false
                 (box
@@ -82,12 +82,12 @@
                     )
                     (button
                         :class "rightSideButton"
-                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --lock"
-                        ""
+                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --hyprshot"
+                        "󱊅"
                     )
                 )
             )
-            (box
+            (box ;; right side
                 :orientation "v"
                 (button
                     :class "bluetooth-module module ${bluetooth_status == 'on' ? 'bluetooth-on' : 'bluetooth-off'}"
@@ -96,8 +96,8 @@
                 )
                 (button
                     :class "rightSideButton"
-                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --hyprshot"
-                    "󱊅"
+                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --terminal"
+                    ""
                 )
                 (button
                     :class "rightSideButton"
