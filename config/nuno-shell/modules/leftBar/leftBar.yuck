@@ -19,8 +19,8 @@
 )
 
 (deflisten workspaceListen "hyprland-workspaces `hyprctl monitors -j | jq -r \".[0].name\"`")
-(defpoll hour :interval "3600s" "date +%H")
-(defpoll min  :interval "60s" "date +%M")
+(defpoll hour :interval "10s" "date +%H")
+(defpoll min  :interval "10s" "date +%M")
 
 (defwidget _bar [screen]
     (centerbox :orientation "v"
