@@ -9,6 +9,9 @@ elif [[ "$1" == "--lock" ]]; then
 elif [[ "$1" == "--hyprshot" ]]; then
 	hyprshot -m region &
 
+elif [[ "$1" == "--terminal" ]]; then
+	kitty &
+
 elif [[ "$1" == "--audio" ]]; then
     flatpak run com.saivert.pwvucontrol &
 fi
