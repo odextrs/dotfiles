@@ -1,0 +1,116 @@
+(defwindow rightSide
+    :monitor 0
+    :class "rightSideHover"
+    :namespace "nuno-shell"
+    :geometry (geometry
+        :x "-1px"
+        :y "0px"
+        :width "5px" ;;5px
+        :height "120px"
+        :anchor "center right"
+    )
+    (eventbox
+    :onhover "${EWW_CMD} update show_rightSide=true"
+    :onhoverlost "${EWW_CMD} update show_rightSide=false"
+        (revealer
+            :transition "slideleft"
+            :reveal show_rightSide
+            :duration "200ms"
+            (rightSideRevealer)
+        )
+    )
+)
+
+(defvar show_rightSide false)
+(deflisten player_status :initial "Stopped" "playerctl metadata --format '{{status}}' --follow || echo 'Stopped'")
+(defpoll cover_art_path :interval "1s" "modules/rightSide/scripts/mediaCover.sh")
+(defpoll bluetooth_status :interval "0.1s" "modules/rightSide/scripts/bluetoothctl.sh status")
+
+(defwidget rightSideWidget []
+    (box
+        :orientation "v"
+        :class "rightSide-panel"
+        (box
+            :class "mediaWidget"
+            :orientation "h"
+            :space-evenly false
+            (box
+                :class "mediaCover"
+                :style "background-image: url('${cover_art_path}');"
+            )
+            (box
+                :class "mediaControls-panel"
+                :orientation "v"
+                :space-evenly true
+                (button
+                    :class "mediaControlsResume"
+                    :onclick "playerctl play-pause"
+                    {player_status == "Playing" ? "" : ""}
+                )
+                (button
+                    :class "mediaControlsButton"
+                    :onclick "playerctl previous"
+                    "󰼨"
+                )
+                (button
+                    :class "mediaControlsButton"
+                    :onclick "playerctl next"
+                    "󰼧"
+                )
+            )
+        )
+        (box
+            :class "rightSideButton-misc"
+            :orientation "h"
+            :space-evenly false
+            (box
+                :class "rightSideButton-panel"
+                :orientation "h"
+                :space-evenly false
+                (box
+                    :orientation "v"
+                    (button
+                        :class "rightSideButton"
+                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --dolphin"
+                        ""
+                    )
+                    (button
+                        :class "rightSideButton"
+                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --audio"
+                        ""
+                    )
+                    (button
+                        :class "rightSideButton"
+                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --lock"
+                        ""
+                    )
+                )
+            )
+            (box
+                :orientation "v"
+                (button
+                    :class "bluetooth-module module ${bluetooth_status == 'on' ? 'bluetooth-on' : 'bluetooth-off'}"
+                    :onclick "modules/rightSide/scripts/bluetoothctl.sh toggle"
+                    "󰂯"
+                )
+                (button
+                    :class "rightSideButton"
+                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --hyprshot"
+                    "󱊅"
+                )
+                (button
+                    :class "rightSideButton"
+                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --AppLauncher"
+                    ""
+                )
+            )
+        )
+    )
+)
+
+(defwidget rightSideRevealer []
+    (box
+        :orientation "v"
+        (rightSideWidget)
+    )
+)

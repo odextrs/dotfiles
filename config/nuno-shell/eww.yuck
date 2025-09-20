@@ -1,0 +1,7 @@
+;;   ╔═════════════════╗
+;;   ║  nuno shell v1  ║
+;;   ╚═════════════════╝
+
+(include "./modules/leftBar/leftBar.yuck")
+(include "./modules/rightSide/rightSide.yuck")
+(include "./modules/desktop/desktop.yuck")

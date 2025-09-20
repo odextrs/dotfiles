@@ -1,0 +1,107 @@
+(defwindow leftBar
+    :monitor 0
+    :stacking "bottom"
+    :namespace "nuno-shell"
+    :exclusive true
+    :reserve (struts
+        :distance "60px"
+        :side "left"
+    )
+    :geometry (geometry
+        :x 0
+        :y 0
+        :width "60px"
+        :height "100%"
+        :anchor "center left"
+    )
+    
+    (_bar :screen 1)
+)
+
+(deflisten workspaceListen "hyprland-workspaces `hyprctl monitors -j | jq -r \".[0].name\"`")
+(defpoll hour :interval "3600s" "date +%H")
+(defpoll min  :interval "60s" "date +%M")
+
+(defwidget _bar [screen]
+    (centerbox :orientation "v"
+        (box
+            :class "segment-top"
+            :valign "start"
+            (_top :screen screen)
+        )
+        (box
+            :class "segment-middle"
+            :valign "center"
+            (_middle :screen screen)
+        )
+        (box
+            :class "segment-bottom"
+            :valign "end"
+            (_bottom :screen screen)
+        )
+    )
+)
+
+(defwidget _top [screen]
+    (box
+        :orientation "v"
+        :valign "start"
+        :space-evenly true
+        :spacing 5
+        (_hyprlandWorkspaces)
+    )
+)
+
+(defwidget _middle [screen]
+    (box
+        :orientation "v"
+        :valign "start"
+        :space-evenly true
+        :spacing 5
+    )
+)
+
+(defwidget _bottom [screen]
+    (box
+        :orientation "v"
+        :valign "start"
+        :space-evenly false
+        :spacing 5
+        (systray
+            :class "systemTray"
+            :icon-size "16"
+            :orientation "v"
+            :spacing "5"
+        )
+        (label
+            :text "|"
+            :class "barSeparation"
+            :angle "90"
+        )
+        (_barClock)
+    )
+)
+
+(defwidget _barClock []
+    (box
+        :orientation "v"
+        :class "barClock"
+        hour
+        min
+    )
+)
+
+(defwidget _hyprlandWorkspaces []
+    (box
+        :class "workspaces"
+        :orientation "vertical"
+        :vexpand true
+        (for i in workspaceListen
+            (button
+                :onclick "hyprctl dispatch workspace ${i.id}"
+                :class "${i.class}"
+                "${i.name}"
+            )
+        )
+    )
+)

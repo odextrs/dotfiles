@@ -1,0 +1,128 @@
+$foreground: #c2c3c6;
+$foreground-dark: #131313;
+$accent: #ffffff;
+$background: rgba(20, 20, 20, 0.3);
+$background-button: rgba(45, 45, 45, 0.3);
+$grey: #949494;
+
+* {
+    all: unset;
+    font-family: "JetBrains Mono Nerdfont";
+}
+
+.barSeparation {
+    padding: 10px 0px 10px 0px;
+}
+
+.leftBar {
+    background: $background;
+    & > * {
+        margin: 0px;
+    }
+}
+
+.workspaces {
+    margin-top: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.workspace-active {
+    background: $foreground;
+    color: $foreground-dark;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+}
+
+.mediaControlsButton, .mediaControlsResume{
+    color: $foreground;
+    background-color: transparent;
+    border-radius: 4px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.mediaControlsResume{
+    color: $foreground-dark;
+    background-color: $foreground;
+    font-size: 16px;
+}
+
+.mediaCover {
+    background-size: cover;
+    background-position: center;
+    min-width: 155px;
+    min-height: 125px;
+    border-radius: 5px;
+    margin: 10px 5px 10px 05px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+
+.rightSide-panel {
+    margin: 0px 0px 5px 5px;
+}
+
+.rightSideButton {
+    color: $foreground;
+    background-color: $background-button;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 50px 10px 50px;
+}
+
+.bluetooth-on {
+    color: $foreground-dark;
+    background-color: $foreground;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 50px 10px 50px;
+}
+
+.bluetooth-off {
+    color: $foreground;
+    background-color: $background-button;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 5px 5px 5px 5px;
+    padding: 10px 50px 10px 50px;
+}
+
+.rightSide {
+    background-color: transparent;
+}
+
+menu {
+    border-radius: 3px;
+    background: #161616;
+    font-family: "Iosevka";
+    color: #606060;
+}
+
+menuitem {
+    color: $foreground;
+    font-family: "Iosevka";
+    margin: 0px 0px 0px 0px;
+    padding: 5px 10px 5px 10px;
+}
+
+menuitem:hover {
+    background: $foreground;
+    color: $foreground-dark;
+    border-radius: 3px;
+}
+
+.barClock {
+    padding: 0px 0px 15px 0px;
+}
+
+.desktopClock {
+    font-size: 50px;
+    font-family: "Koulen";
+    color: $grey;
+    padding: 30px 30px 30px 30px
+}

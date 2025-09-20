@@ -1,0 +1,37 @@
+(defwindow desktop
+    :monitor 0
+    :stacking "bottom"
+    :windowtype "normal"
+    :wm-ignore true
+    :geometry (geometry
+        :width "96%"
+        :height "100%" ;;maybe 105% who knows
+    )
+    (desktopWidget)
+)
+
+(defpoll time :interval "10s" :initial `date +'{"hour":"%H","min":"%M"}'` `date +'{"hour":"%H", "min":"%M"}'`)
+
+(defwidget desktopWidget []
+    (box
+        :class "dekstopWidget"
+        :space-evenly false
+        :orientation "v"
+        (box
+            :space-evenly false
+            :hexpand true
+            :vexpand true
+            (box
+                :spacing 15
+                :class "desktopClock"
+                :space-evenly false
+                :valign "end"
+                :halign "end"
+                :hexpand true
+                (label
+                    :text "${time.hour}:${time.min}"
+                )
+            )
+        )
+    )
+)
