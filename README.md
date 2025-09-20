@@ -11,10 +11,9 @@ my personal Hyprland + EWW dotfiles
 
 ## Screenshots
 ![alt text](assets/normal.png)
-(normal)
 
 ![alt text](assets/expanded.png)
-(hovered)
+(expanded)
 
 ### Applications that I recommend to use together
 - Notification Daemon : [dunst](https://github.com/dunst-project/dunst)
@@ -23,7 +22,7 @@ my personal Hyprland + EWW dotfiles
 
 ## Observations
 
-### !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
+#### !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
 
 Wallpaper is handled by EWW, but hyprpaper config exists, just add it to exec-now on hyprland.conf, hyprpaper searches for the wallpaper on .config/hypr/assets/wallpaper.png
 obs: EWW searches for "wallpaper.png" on (eww config)/assets/wallpaper.png
