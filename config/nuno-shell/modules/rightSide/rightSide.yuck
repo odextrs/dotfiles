@@ -25,6 +25,7 @@
 (deflisten player_status :initial "Stopped" "playerctl metadata --format '{{status}}' --follow || echo 'Stopped'")
 (defpoll cover_art_path :interval "1s" "modules/rightSide/scripts/mediaCover.sh")
 (defpoll bluetooth_status :interval "0.1s" "modules/rightSide/scripts/bluetoothctl.sh status")
+(defpoll network_status :interval "0.1s" "modules/rightSide/scripts/network.sh status")
 
 (defwidget rightSideWidget []
     (box
@@ -70,9 +71,9 @@
                 (box
                     :orientation "v"
                     (button
-                        :class "rightSideButton"
-                        :onclick "modules/rightSide/scripts/rightSideButtons.sh --dolphin"
-                        ""
+                        :class "networkToggle-module module ${network_status == 'on' ? 'networkToggle-on' : 'networkToggle-off'}"
+                        :onclick "modules/rightSide/scripts/network.sh toggle"
+                        ""
                     )
                     (button
                         :class "rightSideButton"
@@ -100,8 +101,8 @@
                 )
                 (button
                     :class "rightSideButton"
-                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --AppLauncher"
-                    ""
+                    :onclick "modules/rightSide/scripts/rightSideButtons.sh --dolphin"
+                    ""
                 )
             )
         )
