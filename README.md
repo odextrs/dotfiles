@@ -1,4 +1,4 @@
-# hertaOS
+# hertaOS dotfiles
 my personal Hyprland + EWW dotfiles
 
 ### Requirements
@@ -15,10 +15,18 @@ my personal Hyprland + EWW dotfiles
 ![alt text](assets/expanded.png)
 (expanded)
 
-### Applications that I recommend to use together
+### Applications that I recommend using together
 - Notification Daemon : [dunst](https://github.com/dunst-project/dunst)
 - Application Launcher : [Vicinae](https://github.com/vicinaehq/vicinae) or [Sherlock](https://github.com/Skxxtz/sherlock)
-- Browser : [Zen](https://zen-browser.app) [github](https://github.com/zen-browser/desktop) or [Floorp](https://floor.app) [github](https://github.com/Floorp-Projects/Floorp)
+- Browser : [Zen](https://zen-browser.app) ([github](https://github.com/zen-browser/desktop)) or [Floorp](https://floor.app) ([github](https://github.com/Floorp-Projects/Floorp))
+- Anime : [curd](https://github.com/Wraient/curd) (TUI scraper using anilist, also supports tracking) and [Hayase](https://github.com/hayase-app/ui) (bittorrent client, formerly miru)
+
+## TODO List
+
+- Rewrite nuno shell to an better framework like [Fabric](https://github.com/Fabric-Development/fabric/) (GTK / Python) or [Quickshell](https://quickshell.org/) (QT / QML)
+- Improve the design, while also maintaining the "modern" aesthetic
+  
+- Feature: Settings window, wallpaper switch and an option to use colors set based on your wallpaper (eg. [cwal](https://github.com/nitinbhat972/cwal), [Matugen](https://github.com/InioX/matugen) or [wallust](https://codeberg.org/explosion-mental/wallust))
 
 ## Observations
 
