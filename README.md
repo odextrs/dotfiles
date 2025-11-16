@@ -5,7 +5,6 @@ my personal Hyprland + EWW dotfiles
 - [hyprland](https://github.com/hyprwm/Hyprland)
 - [EWW](https://github.com/elkowar/eww)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
-- [hyprshot](https://github.com/Gustash/hyprshot)
 - JetBrains Nerdfont Mono
 - [Hyprpaper](https://github.com/hyprwm/hyprpaper) (optional, disabled by default)
 
@@ -32,5 +31,6 @@ my personal Hyprland + EWW dotfiles
 
 #### !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
 
-Wallpaper is handled by EWW, but hyprpaper config exists, just add it to exec-now on hyprland.conf, hyprpaper searches for the wallpaper on .config/hypr/assets/wallpaper.png
-obs: EWW searches for "wallpaper.png" on (eww config)/assets/wallpaper.png
+Wallpaper is handled by EWW, with the wallpaper being set on ~/.config/nuno-shell/assets/wallpaper.png
+
+You can also install something like [awww (fomerly known as swww)](https://codeberg.org/LGFae/awww)
