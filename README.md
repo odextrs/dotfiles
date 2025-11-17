@@ -6,7 +6,8 @@ my personal Hyprland + EWW dotfiles
 - [EWW](https://github.com/elkowar/eww)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
 - JetBrains Nerdfont Mono
-- [Hyprpaper](https://github.com/hyprwm/hyprpaper) (optional, disabled by default)
+- [Hyprshot](https://github.com/Gustash/hyprshot)
+- [dunst](https://github.com/dunst-project/dunst) (or just change it)
 
 ## Screenshots
 ![alt text](assets/normal.png)
@@ -15,10 +16,9 @@ my personal Hyprland + EWW dotfiles
 (expanded)
 
 ### Applications that I recommend using together
-- Notification Daemon : [dunst](https://github.com/dunst-project/dunst)
 - Application Launcher : [Vicinae](https://github.com/vicinaehq/vicinae) or [Sherlock](https://github.com/Skxxtz/sherlock)
 - Browser : [Zen](https://zen-browser.app) ([github](https://github.com/zen-browser/desktop)) or [Floorp](https://floor.app) ([github](https://github.com/Floorp-Projects/Floorp))
-- Anime : [curd](https://github.com/Wraient/curd) (TUI scraper using anilist, also supports tracking) and [Hayase](https://github.com/hayase-app/ui) (bittorrent client, formerly miru)
+- Anime : [curd](https://github.com/Wraient/curd) (TUI scraper using anilist, also supports tracking) or [Hayase](https://hayase.watch) (bittorrent client, formerly miru)
 
 ## TODO List
 
@@ -31,6 +31,6 @@ my personal Hyprland + EWW dotfiles
 
 #### !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
 
-Wallpaper is handled by EWW, with the wallpaper being set on ~/.config/nuno-shell/assets/wallpaper.png
+Wallpaper is handled by EWW, with the wallpaper being set on ~/.config/nuno-shell/assets/wallpaper.png (I recommend changing to [awww (formerly known as swww)](https://codeberg.org/LGFae/awww))
 
-You can also install something like [awww (fomerly known as swww)](https://codeberg.org/LGFae/awww)
+also, EWW power menu on the bottom of the screen comes disabled by default, and it lacks a confirmation prompt for now. Hyprland auto executes EWW on launch via the script on /hypr/scripts/eww.sh

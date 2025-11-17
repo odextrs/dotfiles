@@ -1,86 +1,85 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-    
-    "logo": {
-        "source": "~/.config/fastfetch/images/futabaRio.png",
-        "type": "kitty-direct",
-        "height": 13,
-        "width": 30,
-        "padding": {
-            "top": 2,
-            "left": 4,
-            "right": 5
-        }
-    },
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
 
-    "modules": [
-        "break",
-        {
-            "type": "custom",
-            "outputColor": "blue",
-            "format": "┌[hertaHardware]"
-        },
-        {
-            "type": "cpu",
-            "keyColor": "blue",
-            "key": "├ "
-        },
-        {
-            "type": "gpu",
-            "keyColor": "blue",
-            "key": "├ 󰢮"
-        },
-        {
-            "type": "disk",
-            "keyColor": "blue",
-            "key": "├ "
-        },
-        {
-            "type": "custom",
-            "outputColor": "blue",
-            "format": "└ ~~ ─ ~~"
-        },
-        "break",
-        {
-            "type": "custom",
-            "outputColor": "green",
-            "format": "┌[hertaOS]"
-        },
-        {
-            "type": "kernel",
-            "keyColor": "green",
-            "key": "├ "
-        },
-        {
-            "type": "wm",
-            "keyColor": "green",
-            "key": "├ "
-        },
-        {
-            "type": "terminal",
-            "keyColor": "green",
-            "key": "├ "
-        },
-        {
-            "type": "shell",
-            "keyColor": "green",
-            "key": "├ "
-        },
-        {
-            "type": "packages",
-            "keyColor": "green",
-            "key": "├ 󰏗"
-        },
-        {
-            "type": "uptime",
-            "keyColor": "green",
-            "key": "├ 󰥔"
-        },
-        {
-            "type": "custom",
-            "outputColor": "green",
-            "format": "└ ~~ ─ ~~"
-        },
-    	"break"
-    ]
+  "logo": {
+    "source": "~/.config/fastfetch/images/*.png",
+    "type": "kitty-direct",
+    "height": 13,
+    "width": 30,
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 3,
+    },
+  },
+
+  "modules": [
+    {
+      "type": "custom",
+      "outputColor": "blue",
+      "format": "┌[hertaHardware]",
+    },
+    {
+      "type": "cpu",
+      "keyColor": "blue",
+      "key": "├ ",
+    },
+    {
+      "type": "gpu",
+      "keyColor": "blue",
+      "key": "├ 󰢮",
+    },
+    {
+      "type": "disk",
+      "keyColor": "blue",
+      "key": "├ ",
+    },
+    {
+      "type": "custom",
+      "outputColor": "blue",
+      "format": "└ ~~ ─ ~~",
+    },
+    "break",
+    {
+      "type": "custom",
+      "outputColor": "green",
+      "format": "┌[hertaOS]",
+    },
+    {
+      "type": "kernel",
+      "keyColor": "green",
+      "key": "├ ",
+    },
+    {
+      "type": "wm",
+      "keyColor": "green",
+      "key": "├ ",
+    },
+    {
+      "type": "terminal",
+      "keyColor": "green",
+      "key": "├ ",
+    },
+    {
+      "type": "shell",
+      "keyColor": "green",
+      "key": "├ ",
+    },
+    {
+      "type": "packages",
+      "keyColor": "green",
+      "key": "├ 󰏗",
+    },
+    {
+      "type": "uptime",
+      "keyColor": "green",
+      "key": "├ 󰥔",
+    },
+    {
+      "type": "custom",
+      "outputColor": "green",
+      "format": "└ ~~ ─ ~~",
+    },
+    "break",
+  ],
 }
