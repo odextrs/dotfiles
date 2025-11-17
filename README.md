@@ -34,3 +34,7 @@ my personal Hyprland + EWW dotfiles
 Wallpaper is handled by EWW, with the wallpaper being set on ~/.config/nuno-shell/assets/wallpaper.png (I recommend changing to [awww (formerly known as swww)](https://codeberg.org/LGFae/awww))
 
 also, EWW power menu on the bottom of the screen comes disabled by default, and it lacks a confirmation prompt for now. Hyprland auto executes EWW on launch via the script on /hypr/scripts/eww.sh
+
+## Acknowledgements
+
+Mitsukiyuki (one of the fastfetch images) is the property of [Moondrop](https://moondroplab.com/en/drawing)
