@@ -5,6 +5,7 @@ my personal Hyprland + EWW dotfiles
 - [hyprland](https://github.com/hyprwm/Hyprland)
 - [EWW](https://github.com/elkowar/eww)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
+- `hyprland-workspaces` package from AUR
 - JetBrains Nerdfont Mono
 - [Hyprshot](https://github.com/Gustash/hyprshot)
 - [dunst](https://github.com/dunst-project/dunst) (or just change it)
