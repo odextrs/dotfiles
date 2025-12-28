@@ -1,0 +1,9 @@
+[config.wallpaper]
+command = "awww"
+arguments = ["img", "--transition-type", "center"]
+set = true
+
+[templates.mangowc]
+input_path = './templates/mangowc.conf'
+output_path = '~/.config/mango/matugen.conf'
+post_hook = 'mmsg -d reload_config'

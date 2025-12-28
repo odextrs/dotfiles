@@ -5,5 +5,5 @@
 (include "./modules/leftBar/leftBar.yuck")
 (include "./modules/rightSide/rightSide.yuck")
 (include "./modules/desktop/desktop.yuck")
-(include "./modules/desktop/wallpaper.yuck")
+;;(include "./modules/desktop/wallpaper.yuck")
 (include "./modules/desktop/powerMenu.yuck")

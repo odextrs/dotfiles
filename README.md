@@ -1,14 +1,19 @@
 # hertaOS dotfiles
 my personal Hyprland + EWW dotfiles
 
+(mangowc + quickshell with matugen WIP)
+
 ### Requirements
 - [hyprland](https://github.com/hyprwm/Hyprland)
 - [EWW](https://github.com/elkowar/eww)
 - [hyprlock](https://github.com/hyprwm/hyprlock)
 - `hyprland-workspaces` package from AUR
 - JetBrains Nerdfont Mono
+- Kitty Terminal Emulator
 - [Hyprshot](https://github.com/Gustash/hyprshot)
 - [dunst](https://github.com/dunst-project/dunst) (or just change it)
+- `awww` wallpaper manager
+- matugen
 
 ## Screenshots
 ![alt text](assets/normal.png)
@@ -31,8 +36,6 @@ my personal Hyprland + EWW dotfiles
 ## Observations
 
 #### !! CONFIGURE YOUR MONITOR FIRST ON hyprland.conf !! (by default its using a 1920x1080 monitor with 180hz being refered as "HDMI-A-1".)
-
-Wallpaper is handled by EWW, with the wallpaper being set on ~/.config/nuno-shell/assets/wallpaper.png (I recommend changing to [awww (formerly known as swww)](https://codeberg.org/LGFae/awww))
 
 also, EWW power menu on the bottom of the screen comes disabled by default, and it lacks a confirmation prompt for now. Hyprland auto executes EWW on launch via the script on /hypr/scripts/eww.sh
 
