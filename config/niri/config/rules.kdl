@@ -1,0 +1,96 @@
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+
+environment {
+    QT_QPA_PLATFORMTHEME "qt6ct"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    match namespace="awww"
+    place-within-backdrop true
+}
+
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+    open-fullscreen false
+}
+
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    match app-id="org.freedesktop.portal.FileChooser"
+    match app-id="com.gnome.Calculator"
+    match app-id="steam" title="Launching..."
+    match app-id="org.gnome.Nautilus" title="Open Folder"
+    open-floating true
+}
+
+window-rule {
+    match app-id="zen"
+    open-focused false
+    open-on-output "HDMI-A-2"
+    draw-border-with-background false
+}
+
+// PiP
+window-rule {
+    match title="Picture-in-Picture"
+    match title="Picture in picture"
+    open-floating true
+    open-focused false
+    border {
+        off
+    }
+    geometry-corner-radius 0
+    default-floating-position x=0 y=500 relative-to="bottom-left"
+}
+
+// Umamusume
+window-rule {
+    match app-id="steam_app_3224770"
+    default-window-height { fixed 576; }
+    default-column-width { fixed 1024; }
+}
+
+// Arknights: Endfield
+window-rule {
+    match app-id="elysia"
+    match title="GRYPHLINK"
+    open-floating true
+}
+
+window-rule {
+    match title="No active window"
+    match title="Form"
+    open-fullscreen false
+    open-floating true
+    draw-border-with-background false
+}
+
+// Steam Toast Window Rule
+window-rule {
+    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// osu!
+window-rule {
+    match app-id="osu!.exe" title="osu!"
+    match app-id="osu!"
+    open-fullscreen true
+    open-floating false
+}
+
+window-rule {
+    match app-id="genshinimpact.exe"
+    match app-id="zenlesszonezero.exe"
+    match app-id="starrail.exe"
+    open-fullscreen true
+    open-floating false
+}

@@ -1,0 +1,22 @@
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "altgr-intl"
+            options "lv3:ralt_switch"
+        }
+    }
+    mouse {
+        accel-profile "flat"
+    }
+    tablet {
+    // off
+    }
+    warp-mouse-to-focus
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}

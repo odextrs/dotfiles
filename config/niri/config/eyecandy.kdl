@@ -1,0 +1,36 @@
+animations {
+    // off
+    slowdown 1.25
+}
+
+layout {
+    gaps 5
+    center-focused-column "never"
+
+    struts {
+        left 5
+        right 5
+        top 5
+        bottom 5
+    }
+
+    // default-column-width { proportion 0.5; }
+    preset-column-widths {
+        proportion 0.5
+        proportion 0.90
+    }
+
+    background-color "transparent"
+
+    focus-ring {
+        width 2
+    }
+
+    border {
+        width 2
+    }
+
+    shadow {
+        off
+    }
+}

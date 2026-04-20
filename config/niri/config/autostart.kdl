@@ -1,0 +1,10 @@
+spawn-at-startup "otd-daemon"
+spawn-at-startup "dunst"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "zen-browser"
+spawn-at-startup "gamemoded"
+spawn-at-startup "xwayland-satellite"
+spawn-sh-at-startup "veilad"
+spawn-sh-at-startup "vicinae server"
+
+//spawn-sh-at-startup "/usr/lib/hyprpolkitagent/hyprpolkitagent"

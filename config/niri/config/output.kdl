@@ -1,0 +1,21 @@
+output "DP-1" {
+    position x=0 y=0
+    scale 1
+    mode "1920x1080@165.002"
+    //mode "1920x1080@179.998"
+    hot-corners {
+        off
+    }
+    //variable-refresh-rate
+    focus-at-startup
+}
+
+output "HDMI-A-2" {
+    position x=1920 y=0
+    scale 1
+    mode "1920x1080@74.973"
+    hot-corners {
+        off
+    }
+    variable-refresh-rate
+}

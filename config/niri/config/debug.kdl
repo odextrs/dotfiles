@@ -1,0 +1,7 @@
+debug {
+    //disable-direct-scanout
+    //disable-cursor-plane
+    //enable-overlay-planes
+    //restrict-primary-scanout-to-matching-format
+    //wait-for-frame-completion-before-queueing
+}
