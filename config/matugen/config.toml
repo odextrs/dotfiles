@@ -1,9 +1,59 @@
 [config.wallpaper]
-command = "awww"
-arguments = ["img", "--transition-type", "center"]
+command = "awww img --transition-type center {{ image }}"
 set = true
 
-[templates.mangowc]
-input_path = './templates/mangowc.conf'
-output_path = '~/.config/mango/matugen.conf'
-post_hook = 'mmsg -d reload_config'
+# [templates.mangowc]
+# input_path = './templates/mangowc/mangowc.conf'
+# output_path = '~/.config/mango/matugen.conf'
+# post_hook = 'mmsg -d reload_config'
+
+[templates.kitty]
+input_path = './templates/kitty/kitty-colors.conf'
+output_path = '~/.config/kitty/themes/Matugen.conf'
+post_hook = "kitty +kitten themes --reload-in=all Matugen"
+
+[templates.btop]
+input_path = './templates/btop/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.gtk3]
+input_path = './templates/gtk/gtk3.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = './templates/gtk/gtk4.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.qt5ct]
+input_path = './templates/qt/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.qt6ct]
+input_path = './templates/qt/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.zed]
+input_path = './templates/zed/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.obs]
+input_path = './templates/obs/matugen.obt'
+output_path = '~/.var/app/com.obsproject.Studio/config/obs-studio/themes/matugen.obt'
+
+[templates.vesktop]
+input_path = './templates/discord/midnight-discord.css'
+output_path = '~/.config/Vencord/themes/midnight-discord.css'
+
+[templates.niri]
+input_path = './templates/niri/niri.kdl'
+output_path = '~/.config/niri/matugen.kdl'
+
+[templates.quickshell]
+input_path = './templates/quickshell/Colour.qml'
+output_path = '~/.config/quickshell/config/Colour.qml'
+
+[templates.wallpaper]
+input_path = './templates/wallpaper.txt'
+output_path = '~/.local/state/quickshell/user/generated/wallpaper/path.txt'
